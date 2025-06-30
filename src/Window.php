@@ -123,7 +123,15 @@ class Window {
 	 * @return Window This object
 	 */
 	public function title($title) {
-		$this->moveCursor(1, 0);
+
+		$this->getSize($cols, rows);
+
+		$title_len = strlen($title);
+
+		$x_col = (cols / 2 - $title_len / 2);
+		
+		
+		$this->moveCursor($x_col, 0);
 		$this->drawStringHere($title, NCURSES_A_REVERSE);
 		return $this;
 	}
