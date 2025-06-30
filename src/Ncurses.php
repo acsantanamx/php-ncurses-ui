@@ -27,13 +27,18 @@ class Ncurses {
 
 		$ncurses_session = ncurses_init();
 
-	}
+		start_color();
+    }
 
 	/**
 	 * Destructs ncurses
 	 */
 	public function __destruct() {
 		ncurses_end();
+	}
+
+	public function createColorPair($id_, $color1_, $Color2_) {
+		init_pair($id_, $color1_, $Color2_);
 	}
 
     /**
@@ -156,5 +161,7 @@ class Ncurses {
         ncurses_insdelln($count);
         return $this;
     }
+
+	
 
 }

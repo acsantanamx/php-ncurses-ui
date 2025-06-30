@@ -53,6 +53,9 @@ class Window {
 			$this->getSize($cols, $rows);
 		$this->cols = $cols;
 		$this->rows = $rows;
+
+		
+
 	}
 
 	/**
@@ -232,5 +235,11 @@ class Window {
 		ncurses_scrollok($this->windowResource, $value_);
 		return $this;
 	}
+
+	public function setColorPair($value_) {
+		wbkgd($this->windowResource, $value_);	
+	}
+
+	
 
 }
