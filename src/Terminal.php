@@ -1,12 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Сергей
- * Date: 15.08.14
- * Time: 13:52
- */
 
-namespace wapmorgan\NcursesObjects;
+
+namespace acsantanamx\NCursesUI;
 
 
 class Terminal {

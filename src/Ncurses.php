@@ -1,5 +1,5 @@
 <?php
-namespace wapmorgan\NcursesObjects;
+namespace acsantanamx\NCursesUI;
 
 function ncurses_init() {
     if (function_exists('\ncurses_init')) {

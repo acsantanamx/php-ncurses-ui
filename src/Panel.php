@@ -1,5 +1,5 @@
 <?php
-namespace wapmorgan\NcursesObjects;
+namespace acsantanamx\NCursesUI;
 
 /**
  * A panel object that implements functionality for ncurses panel resource

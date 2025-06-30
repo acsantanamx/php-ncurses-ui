@@ -1,12 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Сергей
- * Date: 14.08.14
- * Time: 22:04
- */
 
-namespace wapmorgan\NcursesObjects;
+
+namespace acsantanamx\NCursesUI;
 
 
 class Colors {

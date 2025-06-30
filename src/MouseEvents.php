@@ -1,5 +1,5 @@
 <?php
-namespace wapmorgan\NcursesObject;
+namespace acsantanamx\NCursesUI;
 
 class MouseEvents {
     /**

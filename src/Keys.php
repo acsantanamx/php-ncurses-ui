@@ -1,5 +1,5 @@
 <?php
-namespace wapmorgan\NcursesObjects;
+namespace acsantanamx\NCursesUI;
 
 class Keys {
     /**

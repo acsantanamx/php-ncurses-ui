@@ -1,5 +1,5 @@
 <?php
-namespace wapmorgan\NcursesObjects;
+namespace acsantanamx\NCursesUI;
 
 /**
  * A window object that implements functionality for ncurses window resource
@@ -45,7 +45,7 @@ class Window {
 	 * @param int $x
 	 * @param int $y
 	 */
-	public function __construct($columns = 0, $rows = 0, $x = 0, $y = 0) {
+	public function __construct( $x = 0, $y = 0, $columns = 0, $rows = 0) {
 		$this->x = $x;
 		$this->y = $y;
 		$this->windowResource = ncurses_newwin($rows, $columns, $y, $x);
