@@ -25,11 +25,8 @@ class Ncurses {
 	 */
 	public function __construct() {
 
-		echo "__construct 0\n"; 
-
 		$ncurses_session = ncurses_init();
 
-		echo "__construct 1\n"; 
 	}
 
 	/**
