@@ -28,7 +28,7 @@ class Window {
 	 * window geometry
 	 */
 	private $rows;
-	private $columns;
+	private $cols;
 	private $x;
 	private $y;
 
@@ -40,18 +40,18 @@ class Window {
 	/**
 	 * Create a window
 	 *
-	 * @param int $columns
+	 * @param int $cols
 	 * @param int $rows
 	 * @param int $x
 	 * @param int $y
 	 */
-	public function __construct( $x = 0, $y = 0, $columns = 0, $rows = 0) {
+	public function __construct( $x = 0, $y = 0, $cols = 0, $rows = 0) {
 		$this->x = $x;
 		$this->y = $y;
-		$this->windowResource = ncurses_newwin($rows, $columns, $y, $x);
-		if ($rows == 0 || $columns == 0)
-			$this->getSize($columns, $rows);
-		$this->columns = $columns;
+		$this->windowResource = ncurses_newwin($rows, $cols, $y, $x);
+		if ($rows == 0 || $cols == 0)
+			$this->getSize($cols, $rows);
+		$this->cols = $cols;
 		$this->rows = $rows;
 	}
 
@@ -74,13 +74,13 @@ class Window {
 
 	/**
 	 * Gets window size
-	 * @param int $columns Will be filled with window columns
+	 * @param int $cols Will be filled with window cols
 	 * @param int $rows Will be filled with window rows
-	 * @return array An array with elements 'columns' and 'rows'
+	 * @return array An array with elements 'cols' and 'rows'
 	 */
-	public function getSize(&$columns = null, &$rows = null) {
-		ncurses_getmaxyx($this->windowResource, $rows, $columns);
-		return array('columns' => $columns, 'rows' => $rows);
+	public function getSize(&$cols = null, &$rows = null) {
+		ncurses_getmaxyx($this->windowResource, $rows, $cols);
+		return array('cols' => $cols, 'rows' => $rows);
 	}
 
 	/**
@@ -208,13 +208,13 @@ class Window {
 	/**
 	 * Makes a window that will be in center of the screen
 	 * @param Window $parentWindow A window that will be major for new window
-	 * @param integer $columns New window columns count
+	 * @param integer $cols New window cols count
 	 * @param integer $row New window rows count
 	 * @return Window A new window that centered of parent window
 	 */
-	static public function createCenteredOf(Window $parentWindow, $columns, $rows) {
-		$parentWindow->getSize($max_columns, $max_rows);
-		return new Window($columns, $rows, ($max_columns / 2 - $columns / 2), ($max_rows / 2 - $rows / 2));
+	static public function createCenteredOf(Window $parentWindow, $cols, $rows) {
+		$parentWindow->getSize($max_cols, $max_rows);
+		return new Window($cols, $rows, ($max_cols / 2 - $cols / 2), ($max_rows / 2 - $rows / 2));
 	}
 
 	public function enableScroll($value_) {
