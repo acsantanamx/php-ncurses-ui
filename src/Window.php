@@ -189,6 +189,13 @@ class Window {
 		return $this;
 	}
 
+	public function drawStringXY($x_, $y_, $string_, $attributes_ = 0) {
+		ncurses_wattron($this->windowResource, $attributes_);
+		ncurses_mvaddstr($this->windowResource, $x_, $y_, $string_);
+		ncurses_wattroff($this->windowResource, $attributes_);
+		return $this;
+	}
+
 	/**
 	 * @todo Delete
 	 */
