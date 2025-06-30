@@ -216,4 +216,10 @@ class Window {
 		$parentWindow->getSize($max_columns, $max_rows);
 		return new Window($columns, $rows, ($max_columns / 2 - $columns / 2), ($max_rows / 2 - $rows / 2));
 	}
+
+	public function enableScroll($value_) {
+		ncurses_scrollok($this->windowResource, $value_);
+		return $this;
+	}
+
 }

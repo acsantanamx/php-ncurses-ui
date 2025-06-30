@@ -2,7 +2,13 @@
 namespace acsantanamx\NCursesUI;
 
 function ncurses_init() {
+
+	echo "ncurses_init 0\n"; 
+
     if (function_exists('\ncurses_init')) {
+
+		echo "ncurses_init 1\n";
+
         return \ncurses_init();
     }
     throw new \RuntimeException("Library <ncurses> in not loaded.");
@@ -31,7 +37,12 @@ class Ncurses {
 	 * Inits ncurses
 	 */
 	public function __construct() {
-		ncurses_init();
+
+		echo "__construct 0\n"; 
+
+		$ncurses_session = ncurses_init();
+
+		echo "__construct 1\n"; 
 	}
 
 	/**
