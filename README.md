@@ -2,12 +2,6 @@ PHP NCursesUI
 ==================
 This is a php library that provides ncurses functionality in OOP interface.
 
-[![Composer package](http://composer.network/badge/acsantanamx\NCursesUI)](https://packagist.org/packages/acsantanamx\NCursesUI)
-[![Latest Stable Version](https://poser.pugx.org/acsantanamx\NCursesUI/v/stable)](https://packagist.org/packages/acsantanamx\NCursesUI)
-[![Total Downloads](https://poser.pugx.org/acsantanamx\NCursesUI/downloads)](https://packagist.org/packages/acsantanamx\NCursesUI)
-[![License](https://poser.pugx.org/acsantanamx\NCursesUI/license)](https://packagist.org/packages/acsantanamx\NCursesUI)
-[![Latest Unstable Version](https://poser.pugx.org/acsantanamx\NCursesUI/v/unstable)](https://packagist.org/packages/acsantanamx\NCursesUI)
-
 1. Basics
 2. Installation
 3. Simple application example
@@ -15,8 +9,6 @@ This is a php library that provides ncurses functionality in OOP interface.
 5. Installation of ncurses binding
 
 # Basics
-
-![Structure](Structure.png)
 
 1. There's 4 main classes:
 	1. **Ncurses** - main object to act with Ncurses.
@@ -36,8 +28,6 @@ This is a php library that provides ncurses functionality in OOP interface.
    3. refresh() calling
    4. go to step **2**
 3. Read comments and see examples
-4. Ncurses in PHP tutorial: http://devzone.zend.com/173/using-ncurses-in-php/ ([on russian](http://habrahabr.ru/post/186570/)).
-5. Ncurses tutorial: http://invisible-island.net/ncurses/ncurses-intro.html, docs: http://pubs.opengroup.org/onlinepubs/007908799/xcurses/curses.h.html
 
 # Installation
 Install it via Composer:
