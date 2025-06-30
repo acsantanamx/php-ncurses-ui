@@ -124,11 +124,14 @@ class Window {
 	 */
 	public function title($title) {
 
-		$this->getSize($cols, rows);
+		$cols=0;
+		$rows=0;
+
+		$this->getSize($cols, $rows);
 
 		$title_len = strlen($title);
 
-		$x_col = (cols / 2 - $title_len / 2);
+		$x_col = ($cols / 2 - $title_len / 2);
 		
 		
 		$this->moveCursor($x_col, 0);
