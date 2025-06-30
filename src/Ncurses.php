@@ -1,19 +1,6 @@
 <?php
 namespace acsantanamx\NCursesUI;
 
-function ncurses_init() {
-
-	echo "ncurses_init 0\n"; 
-
-    if (function_exists('\ncurses_init')) {
-
-		echo "ncurses_init 1\n";
-
-        return \ncurses_init();
-    }
-    throw new \RuntimeException("Library <ncurses> in not loaded.");
-}
-
 /**
  * A ncurses object that implements functionality for main ncurses functions
  * @author wapmorgan (wapmorgan@gmail.com)
