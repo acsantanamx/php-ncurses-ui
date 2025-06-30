@@ -38,7 +38,7 @@ class Ncurses {
 	}
 
 	public function createColorPair($id_, $color1_, $Color2_) {
-		init_pair($id_, $color1_, $Color2_);
+		ncurses_init_pair($id_, $color1_, $Color2_);
 	}
 
     /**

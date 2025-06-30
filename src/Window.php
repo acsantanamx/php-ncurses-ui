@@ -237,7 +237,7 @@ class Window {
 	}
 
 	public function setColorPair($value_) {
-		wbkgd($this->windowResource, $value_);	
+		ncurses_wbkgd($this->windowResource, $value_);	
 	}
 
 	
