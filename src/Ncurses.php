@@ -27,7 +27,7 @@ class Ncurses {
 
 		$ncurses_session = ncurses_init();
 
-		start_color();
+		ncurses_start_color();
     }
 
 	/**
