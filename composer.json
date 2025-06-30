@@ -1,5 +1,5 @@
 {
-    "name": "acsantanamx/NCursesUI",
+    "name": "acsantanamx/php-ncurses-ui",
     "description": "This library implements ncurses functionality in OOP way.",
     "license": "MIT",
     "require": {
