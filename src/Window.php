@@ -32,6 +32,9 @@ class Window {
 	private $x;
 	private $y;
 
+	private  $_ms_to_refresh = 0;
+	private  $_last_time_refresh = 0;
+
     /**
      * @var WindowStyle
      */
@@ -116,6 +119,14 @@ class Window {
 	 * @return Window This object
 	 */
 	public function refresh() {
+
+		if ($this->_ms_to_refresh > 0){
+			
+			if(((microtime(true) - $this->_last_time_refresh) * 1000000) < $s) return;
+
+			$this->_last_time_refresh = microtime(true);
+		}
+
 		ncurses_wrefresh($this->windowResource);
 		return $this;
 	}
@@ -247,6 +258,9 @@ class Window {
 		ncurses_wbkgd($this->windowResource, $value_);	
 	}
 
+	public function setRefreshTime($mstime_){
+		$this->_ms_to_refresh = $mstime_;
+	}
 	
 
 }
