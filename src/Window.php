@@ -122,7 +122,7 @@ class Window {
 
 		if ($this->_ms_to_refresh > 0){
 			
-			if(((microtime(true) - $this->_last_time_refresh) * 1000000) < $s) return;
+			if(((microtime(true) - $this->_last_time_refresh) * 1000000) < $this->_ms_to_refresh) return;
 
 			$this->_last_time_refresh = microtime(true);
 		}
