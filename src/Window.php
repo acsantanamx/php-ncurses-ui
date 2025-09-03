@@ -121,10 +121,12 @@ class Window {
 	public function refresh() {
 
 		if ($this->_ms_to_refresh > 0){
-			
-			if(((microtime(true) - $this->_last_time_refresh) * 1000000) < $this->_ms_to_refresh) return;
 
-			$this->_last_time_refresh = microtime(true);
+			$currrent_time = microtime(true);
+			
+			if((($currrent_time - $this->_last_time_refresh) * 1000000) < $this->_ms_to_refresh) return;
+
+			$this->_last_time_refresh = $currrent_time;
 		}
 
 		ncurses_wrefresh($this->windowResource);
